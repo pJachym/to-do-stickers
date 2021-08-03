@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { tasks as tasksData } from "data/tasks";
-import StickersWrapper from "components/Organisms/StickersWrapper/StickersWrapper";
 
 export const StickersContext = React.createContext({
   tasks: [],
