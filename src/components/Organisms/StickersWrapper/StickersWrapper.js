@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import StickerWrapper from "components/Molecules/StickerWrapper/StickerWrapper";
 import { StickersContext } from "components/providers/StickersProvider";
+import StickerWrapper from "components/Molecules/StickerWrapper/StickerWrapper";
 import { Stickers, Wrapper } from "./StickersWrapper.styles";
 
 const StickersWrapper = () => {

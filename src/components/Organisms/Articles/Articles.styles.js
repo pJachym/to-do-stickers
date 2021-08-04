@@ -24,3 +24,9 @@ export const ContentWrapper = styled.div`
   align-items: center;
   flex-direction: column;
 `;
+
+export const LoadingP = styled.p`
+  color: ${({ theme }) => theme.colors.darkGrey};
+  font-size: 24px;
+  font-weight: bold;
+`;
