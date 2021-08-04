@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { ReactComponent as DeleteIcon } from "assets/icons/delete.svg";
 import { StickersContext } from "components/providers/StickersProvider";
 import {
   Wrapper,
@@ -11,13 +10,18 @@ import {
   Description,
   Data,
 } from "./StickerWrapper.styles";
+import { ReactComponent as DeleteIcon } from "assets/icons/delete.svg";
 
 const StickerWrapper = ({ task }) => {
   const { deleteTask } = useContext(StickersContext);
 
+  const handleDeleteTask = () => {
+    deleteTask(task.id);
+  };
+
   return (
     <Wrapper>
-      <DeleteButton onClick={() => deleteTask(task.id)}>
+      <DeleteButton onClick={handleDeleteTask}>
         <DeleteIcon />
       </DeleteButton>
       <AboutWrapper category={task.category}>

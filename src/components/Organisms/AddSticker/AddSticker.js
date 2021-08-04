@@ -1,45 +1,7 @@
 import React, { useState, useContext } from "react";
-import FormField from "components/Molecules/FormField/FormField";
-import styled from "styled-components";
 import { StickersContext } from "components/providers/StickersProvider";
-
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-`;
-
-const StyledH2 = styled.h2`
-  top: 75px;
-  left: 30px;
-  color: ${({ theme }) => theme.colors.darkGrey};
-  margin-bottom: 20px;
-`;
-
-const ErrorP = styled.p`
-  color: ${({ theme }) => theme.colors.error};
-  position: absolute;
-  top: 0;
-`;
-
-const StyledForm = styled.form`
-  padding: 30px 50px;
-  position: relative;
-
-  button {
-    margin-top: 20px;
-    background-color: ${({ theme }) => theme.colors.grey};
-    padding: 10px 40px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: ${({ theme }) => theme.colors.darkGrey};
-  }
-`;
+import FormField from "components/Molecules/FormField/FormField";
+import { Wrapper, StyledH2, ErrorP, StyledForm } from "./AddSticker.styles";
 
 const initialFormValues = {
   title: "",
@@ -63,10 +25,10 @@ const AddSticker = () => {
   const handleSubmitUser = (e) => {
     e.preventDefault();
     if (
-      formValues.title == "" ||
-      formValues.category == "" ||
-      formValues.description == "" ||
-      formValues.data == ""
+      formValues.title === "" ||
+      formValues.category === "" ||
+      formValues.description === "" ||
+      formValues.data === ""
     ) {
       setError("Fill in all required fields");
       return;

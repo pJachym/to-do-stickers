@@ -40,10 +40,7 @@ const Articles = () => {
       <ContentWrapper>
         {articles.length > 0 ? (
           articles.map((article) => (
-            <ArticleWrapper
-              key={article.title}
-              article={article}
-            ></ArticleWrapper>
+            <ArticleWrapper key={article.title} article={article} />
           ))
         ) : (
           <LoadingP>Loading...</LoadingP>

@@ -1,11 +1,15 @@
 import React from "react";
-import { GlobalStyle } from "assets/styles/globalStyles";
 import { ThemeProvider } from "styled-components";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import { routes } from "routes/routes";
 import MainTemaplte from "components/Templates/MainTemplate/MainTemplate";
-import StickersWrapper from "components/Organisms/StickersWrapper/StickersWrapper";
-import AddSticker from "components/Organisms/AddSticker/AddSticker";
 import { theme } from "assets/styles/theme";
+import { GlobalStyle } from "assets/styles/globalStyles";
 
 const Root = () => {
   return (
@@ -14,15 +18,13 @@ const Root = () => {
         <GlobalStyle />
         <div>
           <MainTemaplte>
-            <Route path="/">
+            <Switch>
+              <Redirect from="/old-path" to="/new-path" />
+              {routes.map((route) => (
+                <Route key={route.path} {...route} />
+              ))}
               <Redirect to="/stickers"></Redirect>
-            </Route>
-            <Route path="/stickers">
-              <StickersWrapper></StickersWrapper>
-            </Route>
-            <Route path="/add-sticker">
-              <AddSticker></AddSticker>
-            </Route>
+            </Switch>
           </MainTemaplte>
         </div>
       </ThemeProvider>
