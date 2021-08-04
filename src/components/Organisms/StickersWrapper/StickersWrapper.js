@@ -9,9 +9,9 @@ const StickersWrapper = () => {
   return (
     <Wrapper>
       <Stickers>
-        {tasks.map((task) => (
-          <StickerWrapper key={task.id} task={task}></StickerWrapper>
-        ))}
+        {tasks.map((task) => {
+          return <StickerWrapper key={task.id} task={task}></StickerWrapper>;
+        })}
       </Stickers>
     </Wrapper>
   );
