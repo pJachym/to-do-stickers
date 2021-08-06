@@ -12,7 +12,7 @@ import {
 } from "./StickerWrapper.styles";
 import { ReactComponent as DeleteIcon } from "assets/icons/delete.svg";
 
-const StickerWrapper = ({ task }) => {
+const StickerWrapper = ({ task, ...props }) => {
   const { deleteTask } = useContext(StickersContext);
 
   const handleDeleteTask = () => {
@@ -20,7 +20,7 @@ const StickerWrapper = ({ task }) => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <DeleteButton onClick={handleDeleteTask}>
         <DeleteIcon />
       </DeleteButton>

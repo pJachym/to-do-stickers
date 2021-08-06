@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
   position: relative;
   border-radius: 10px;
   box-shadow: 0 5px 15px -10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 `;
 
 export const AboutWrapper = styled.div`
