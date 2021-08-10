@@ -21,7 +21,7 @@ export const tasks = [
     id: 3,
   },
   {
-    title: "grandpa birthday",
+    title: "grandma birthday",
     description: "Grandma's 70th birthday",
     category: "life",
     data: "saturday",

@@ -18,6 +18,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   padding: 50px;
   z-index: 99;
+  color: ${({ theme }) => theme.colors.darkGrey};
   &:focus {
     outline: none;
   }
@@ -27,7 +28,7 @@ const Wrapper = styled.div`
     width: 100px;
     height: 45px;
     border: 1px solid ${({ theme }) => theme.colors.darkGrey};
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.colors.darkPurple};
     border-radius: 6px;
     text-transform: uppercase;
     font-weight: bold;

@@ -10,7 +10,6 @@ import { routes } from "routes/routes";
 import MainTemaplte from "components/Templates/MainTemplate/MainTemplate";
 import { theme } from "assets/styles/theme";
 import { GlobalStyle } from "assets/styles/globalStyles";
-import Modal from "components/Organisms/Modal.js/Modal";
 
 const Root = () => {
   return (

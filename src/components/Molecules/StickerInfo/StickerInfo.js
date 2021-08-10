@@ -7,7 +7,6 @@ const Wrapper = styled.div`
   align-items: center;
   min-height: 500px;
   width: 100%;
-  background-color: #ccc;
   padding: 10px;
 `;
 
@@ -17,6 +16,7 @@ const HeaderWrapper = styled.div`
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 50px;
 `;
 
 const StickerInfo = ({
